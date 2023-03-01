@@ -1,10 +1,10 @@
 import { footerLinks, socialMedia } from '../constants';
 import styles from '../style';
 import { logo } from '../assets';
-import { isAndroid } from 'react-device-detect';
+import { isAndroid, isIOS } from 'react-device-detect';
 
 const Footer = () => {
-  if (isAndroid) return null;
+  if (isAndroid || isIOS) return null;
 
   return (
     <footer
