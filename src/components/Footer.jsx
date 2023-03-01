@@ -1,8 +1,11 @@
 import { footerLinks, socialMedia } from '../constants';
 import styles from '../style';
 import { logo } from '../assets';
+import { isAndroid } from 'react-device-detect';
 
 const Footer = () => {
+  if (isAndroid) return null;
+
   return (
     <footer
       className={`${styles.flexCenter} ${styles.paddingY} flex-col p-6 mt-10`}
